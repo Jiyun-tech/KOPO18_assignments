@@ -1,0 +1,35 @@
+package File02;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+public class Apartments {
+		static ArrayList<String> list = new ArrayList<String>();
+		
+		public static void main(String[] args) throws IOException {
+			File cvs3 = new File("C:\\Apartments"); // Call all files in Apartment [C:\\Apartments].
+			File[] files = cvs3.listFiles(); // count number of files
+			String line;
+			for (int i = 0; i < files.length; i++) {
+				BufferedReader br = new BufferedReader (new FileReader(files[i]));
+				while ((line = br.readLine()) != null) { // read all except null
+					list.add(line + "\n"); // add all in the ArrayList list.
+				}
+			}
+			
+			BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Apartments2\\combined.csv", true));
+			
+			for (int j = 0; j < list.size(); j++) {
+				writer.write(list.get(j)); // output "list" to a new csv file
+			}
+			
+			writer.close();
+
+		}
+}
