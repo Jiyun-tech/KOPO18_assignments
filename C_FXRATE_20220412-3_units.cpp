@@ -28,29 +28,29 @@ int main () {
 	char *currencyName;
 
 	while(true) {
-		printf("È¯ÀüÀ» ¿øÇÏ´Â ±İ¾×À» ÀÔ·ÂÇÏ¼¼¿ä(¿øÈ­) : ");
+		printf("í™˜ì „ì„ ì›í•˜ëŠ” ê¸ˆì•¡ì„ ì…ë ¥í•˜ì„¸ìš”(ì›í™”) : ");
 		scanf("%d", &inputKRW);
 		do {
-			printf("È¯ÀüÀ» ¿øÇÏ´Â ¿ÜÈ­ ¹øÈ£¸¦ ¼±ÅÃÇÏ¼¼¿ä. (1:USD, 2:JPY, 3:EURO, 4.CNY, 5:GBP) : ");
+			printf("í™˜ì „ì„ ì›í•˜ëŠ” ì™¸í™” ë²ˆí˜¸ë¥¼ ì„ íƒí•˜ì„¸ìš”. (1:USD, 2:JPY, 3:EURO, 4.CNY, 5:GBP) : ");
 			scanf("%d", &inputNumber);
 		} while (inputNumber < 1 || inputNumber > 5);
 		printf("========================================\n");
 		
 		if (inputNumber == 1) {
 			appliedFXRATE = FXRATE_USD;
-			currencyName = "´Ş·¯";
+			currencyName = "ë‹¬ëŸ¬";
 		} else if (inputNumber == 2) {
 			appliedFXRATE = FXRATE_JPY;
-			currencyName = "¿£"; 
+			currencyName = "ì—”"; 
 		} else if (inputNumber == 3) {
 			appliedFXRATE = FXRATE_EUR;
-			currencyName = "À¯·Î";
+			currencyName = "ìœ ë¡œ";
 		} else if (inputNumber == 4) {
 			appliedFXRATE = FXRATE_CNY;
-			currencyName = "À§¾È";
+			currencyName = "ìœ„ì•ˆ";
 		} else if (inputNumber == 5) {
 			appliedFXRATE = FXRATE_GBP;
-			currencyName = "ÆÄ¿îµå";
+			currencyName = "íŒŒìš´ë“œ";
 		}
 		
 		outputForeignCurrency = inputKRW / appliedFXRATE;
@@ -70,10 +70,10 @@ int main () {
 		returnKRW50 = returnKRWFinal%1000%500%100/50;
 		returnKRW10 = returnKRWFinal%1000%500%100%50/10;
 		
-		printf("±âÁØ È¯À² : %10.2f\n", appliedFXRATE);
-		printf("¿ø±İ : %d ¿ø\n", inputKRW);
-		printf("*È¯Àü °á°ú*\n");
-		printf("È¯Àü :  %d %s\n", outputForeignCurrencyFinal, currencyName);
+		printf("ê¸°ì¤€ í™˜ìœ¨ : %10.2f\n", appliedFXRATE);
+		printf("ì›ê¸ˆ : %d ì›\n", inputKRW);
+		printf("*í™˜ì „ ê²°ê³¼*\n");
+		printf("í™˜ì „ :  %d %s\n", outputForeignCurrencyFinal, currencyName);
 	
 		if (inputNumber ==1) {
 			changeForeignCurrency1000 = outputForeignCurrencyFinal/1000;
@@ -82,7 +82,7 @@ int main () {
 			changeForeignCurrency50 = outputForeignCurrencyFinal%1000%500%100/50;
 			changeForeignCurrency10 = outputForeignCurrencyFinal%1000%500%100%50/10;
 			changeForeignCurrency5 = outputForeignCurrencyFinal%1000%500%100%50%10/5;
-			printf(" ==> 1000%s X %d°³, 500%s X %d°³, 100%s X %d°³, 50%s X %d°³, 10%s X %d°³\n, 5%s X %d°³"
+			printf(" ==> 1000%s X %dê°œ, 500%s X %dê°œ, 100%s X %dê°œ, 50%s X %dê°œ, 10%s X %dê°œ\n, 5%s X %dê°œ"
 					, currencyName, changeForeignCurrency1000 
 					, currencyName, changeForeignCurrency500 
 					, currencyName, changeForeignCurrency100
@@ -95,7 +95,7 @@ int main () {
 			changeForeignCurrency1000 = outputForeignCurrencyFinal%10000%5000/1000;
 			changeForeignCurrency500 = outputForeignCurrencyFinal%10000%5000%1000/500;
 			changeForeignCurrency100 = outputForeignCurrencyFinal%10000%5000%1000%500/100;
-			printf(" ==> 10000%s X %d°³, 5000%s X %d°³, 1000%s X %d°³, 500%s X %d°³, 100%s X %d°³\n"
+			printf(" ==> 10000%s X %dê°œ, 5000%s X %dê°œ, 1000%s X %dê°œ, 500%s X %dê°œ, 100%s X %dê°œ\n"
 					, currencyName, changeForeignCurrency10000
 					, currencyName, changeForeignCurrency5000
 					, currencyName, changeForeignCurrency1000
@@ -109,7 +109,7 @@ int main () {
 			changeForeignCurrency20 = outputForeignCurrencyFinal%500%200%100%50/20;
 			changeForeignCurrency10 = outputForeignCurrencyFinal%500%200%100%50%20/10;
 			changeForeignCurrency5 = outputForeignCurrencyFinal%500%200%100%50%20%10/5;
-			printf(" ==> 500%s X %d°³, 200%s X %d°³, 100%s X %d°³, 50%s X %d°³, 20%s x %d°³, 10%s X %d°³, 5%s X %d°³\n"
+			printf(" ==> 500%s X %dê°œ, 200%s X %dê°œ, 100%s X %dê°œ, 50%s X %dê°œ, 20%s x %dê°œ, 10%s X %dê°œ, 5%s X %dê°œ\n"
 					, currencyName, changeForeignCurrency500
 					, currencyName, changeForeignCurrency200
 					, currencyName, changeForeignCurrency100
@@ -122,7 +122,7 @@ int main () {
 			changeForeignCurrency50 = outputForeignCurrencyFinal%100/50;
 			changeForeignCurrency20 = outputForeignCurrencyFinal%100%50/20;
 			changeForeignCurrency10 = outputForeignCurrencyFinal%100%50%20/10;
-			printf(" ==> 100%s X %d°³, 50%s X %d°³, 20%s x %d°³, 10%s X %d°³\n"
+			printf(" ==> 100%s X %dê°œ, 50%s X %dê°œ, 20%s x %dê°œ, 10%s X %dê°œ\n"
 					, currencyName, changeForeignCurrency100
 					, currencyName, changeForeignCurrency50
 					, currencyName, changeForeignCurrency20
@@ -132,15 +132,15 @@ int main () {
 			changeForeignCurrency20 = outputForeignCurrencyFinal%50/20;
 			changeForeignCurrency10 = outputForeignCurrencyFinal%50%20/10;
 			changeForeignCurrency5 = outputForeignCurrencyFinal%50%20%10/5;
-			printf(" ==> 50%s X %d°³, 20%s x %d°³, 10%s X %d°³, 5%s X %d°³\n"
+			printf(" ==> 50%s X %dê°œ, 20%s x %dê°œ, 10%s X %dê°œ, 5%s X %dê°œ\n"
 					, currencyName, changeForeignCurrency50
 					, currencyName, changeForeignCurrency20
 					, currencyName, changeForeignCurrency10
 					, currencyName, changeForeignCurrency5);
 		}
 	
-		printf("°Å½º¸§µ· : %d ¿ø\n", returnKRWFinal);
-		printf(" ==> 1000 ¿ø X %d°³, 500¿ø X %d°³, 100¿ø X %d°³, 50¿ø X %d°³, 10¿ø X %d°³\n"
+		printf("ê±°ìŠ¤ë¦„ëˆ : %d ì›\n", returnKRWFinal);
+		printf(" ==> 1000 ì› X %dê°œ, 500ì› X %dê°œ, 100ì› X %dê°œ, 50ì› X %dê°œ, 10ì› X %dê°œ\n"
 					, currencyName, returnKRW1000
 					, currencyName, returnKRW500
 					, currencyName, returnKRW100
