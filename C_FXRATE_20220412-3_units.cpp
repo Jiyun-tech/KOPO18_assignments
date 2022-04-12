@@ -28,10 +28,10 @@ int main () {
 //	string currencyName;
 
 	while(true) {
-		printf("È¯ÀüÀ» ¿øÇÏ´Â ±İ¾×À» ÀÔ·ÂÇÏ¼¼¿ä(¿øÈ­) : ");
+		printf("í™˜ì „ì„ ì›í•˜ëŠ” ê¸ˆì•¡ì„ ì…ë ¥í•˜ì„¸ìš”(ì›í™”) : ");
 		scanf("%d", &inputKRW);
 		do {
-			printf("È¯ÀüÀ» ¿øÇÏ´Â ¿ÜÈ­ ¹øÈ£¸¦ ¼±ÅÃÇÏ¼¼¿ä. (1:USD, 2:JPY, 3:EURO, 4.CNY, 5:GBP) : ");
+			printf("í™˜ì „ì„ ì›í•˜ëŠ” ì™¸í™” ë²ˆí˜¸ë¥¼ ì„ íƒí•˜ì„¸ìš”. (1:USD, 2:JPY, 3:EURO, 4.CNY, 5:GBP) : ");
 			scanf("%d", &inputNumber);
 		} while (inputNumber < 1 || inputNumber > 5);
 		printf("========================================\n");
@@ -65,20 +65,20 @@ int main () {
 		returnKRW50 = returnKRWFinal%1000%500%100/50;
 		returnKRW10 = returnKRWFinal%1000%500%100%50/10;
 		
-		printf("±âÁØ È¯À² : %10.2f\n", appliedFXRATE);
-		printf("¿ø±İ : %d ¿ø\n", inputKRW);
-		printf("*È¯Àü °á°ú*\n");
-		printf("È¯Àü :  %d ", outputForeignCurrencyFinal);
+		printf("ê¸°ì¤€ í™˜ìœ¨ : %10.2f\n", appliedFXRATE);
+		printf("ì›ê¸ˆ : %d ì›\n", inputKRW);
+		printf("*í™˜ì „ ê²°ê³¼*\n");
+		printf("í™˜ì „ :  %d ", outputForeignCurrencyFinal);
 		switch (inputNumber) {
-			case 1: printf("´Ş·¯\n");
+			case 1: printf("ë‹¬ëŸ¬\n");
 			break;
-			case 2: printf("¿£\n");
+			case 2: printf("ì—”\n");
 			break;
-			case 3: printf("À¯·Î\n");
+			case 3: printf("ìœ ë¡œ\n");
 			break;
-			case 4: printf("À§¾È\n");
+			case 4: printf("ìœ„ì•ˆ\n");
 			break;
-			case 5: printf("ÆÄ¿îµå\n");
+			case 5: printf("íŒŒìš´ë“œ\n");
 			break;
 		} 
 	
@@ -89,7 +89,7 @@ int main () {
 			changeForeignCurrency50 = outputForeignCurrencyFinal%1000%500%100/50;
 			changeForeignCurrency10 = outputForeignCurrencyFinal%1000%500%100%50/10;
 			changeForeignCurrency5 = outputForeignCurrencyFinal%1000%500%100%50%10/5;
-			printf(" ==> 1000´Ş·¯ X %d°³, 500´Ş·¯ X %d°³, 100´Ş·¯ X %d°³, 50´Ş·¯ X %d°³, 10´Ş·¯ X %d°³\n, 5´Ş·¯ X %d°³"
+			printf(" ==> 1000ë‹¬ëŸ¬ X %dê°œ, 500ë‹¬ëŸ¬ X %dê°œ, 100ë‹¬ëŸ¬ X %dê°œ, 50ë‹¬ëŸ¬ X %dê°œ, 10ë‹¬ëŸ¬ X %dê°œ\n, 5ë‹¬ëŸ¬ X %dê°œ"
 					, changeForeignCurrency1000, changeForeignCurrency500, changeForeignCurrency100
 					, changeForeignCurrency50, changeForeignCurrency10, changeForeignCurrency5);
 		} else if (inputNumber ==2) {
@@ -98,7 +98,7 @@ int main () {
 			changeForeignCurrency1000 = outputForeignCurrencyFinal%10000%5000/1000;
 			changeForeignCurrency500 = outputForeignCurrencyFinal%10000%5000%1000/500;
 			changeForeignCurrency100 = outputForeignCurrencyFinal%10000%5000%1000%500/100;
-			printf(" ==> 10000¿£ X %d°³, 5000¿£ X %d°³, 1000¿£ X %d°³, 500¿£ X %d°³, 100¿£ X %d°³\n"
+			printf(" ==> 10000ì—” X %dê°œ, 5000ì—” X %dê°œ, 1000ì—” X %dê°œ, 500ì—” X %dê°œ, 100ì—” X %dê°œ\n"
 					, changeForeignCurrency10000, changeForeignCurrency5000, changeForeignCurrency1000
 					, changeForeignCurrency500, changeForeignCurrency100);
 		} else if (inputNumber ==3) {
@@ -109,7 +109,7 @@ int main () {
 			changeForeignCurrency20 = outputForeignCurrencyFinal%500%200%100%50/20;
 			changeForeignCurrency10 = outputForeignCurrencyFinal%500%200%100%50%20/10;
 			changeForeignCurrency5 = outputForeignCurrencyFinal%500%200%100%50%20%10/5;
-			printf(" ==> 500À¯·Î X %d°³, 200À¯·Î X %d°³, 100À¯·Î X %d°³, 50À¯·Î X %d°³, 20À¯·Î x %d°³, 10À¯·Î X %d°³, 5À¯·Î X %d\n"
+			printf(" ==> 500ìœ ë¡œ X %dê°œ, 200ìœ ë¡œ X %dê°œ, 100ìœ ë¡œ X %dê°œ, 50ìœ ë¡œ X %dê°œ, 20ìœ ë¡œ x %dê°œ, 10ìœ ë¡œ X %dê°œ, 5ìœ ë¡œ X %d\n"
 					, changeForeignCurrency500, changeForeignCurrency200, changeForeignCurrency100, changeForeignCurrency50
 					, changeForeignCurrency20, changeForeignCurrency10, changeForeignCurrency5);
 		} else if (inputNumber ==4) {
@@ -117,19 +117,19 @@ int main () {
 			changeForeignCurrency50 = outputForeignCurrencyFinal%100/50;
 			changeForeignCurrency20 = outputForeignCurrencyFinal%100%50/20;
 			changeForeignCurrency10 = outputForeignCurrencyFinal%100%50%20/10;
-			printf(" ==> 100À§¾È X %d°³, 50À§¾È X %d°³, 20À§¾È x %d°³, 10À§¾È X %d°³\n"
+			printf(" ==> 100ìœ„ì•ˆ X %dê°œ, 50ìœ„ì•ˆ X %dê°œ, 20ìœ„ì•ˆ x %dê°œ, 10ìœ„ì•ˆ X %dê°œ\n"
 					, changeForeignCurrency100, changeForeignCurrency50, changeForeignCurrency20, changeForeignCurrency10);
 		} else if (inputNumber ==5) {
 			changeForeignCurrency50 = outputForeignCurrencyFinal/50;
 			changeForeignCurrency20 = outputForeignCurrencyFinal%50/20;
 			changeForeignCurrency10 = outputForeignCurrencyFinal%50%20/10;
 			changeForeignCurrency5 = outputForeignCurrencyFinal%50%20%10/5;
-			printf(" ==> 50ÆÄ¿îµå X %d°³, 20ÆÄ¿îµå x %d°³, 10ÆÄ¿îµå X %d, 5ÆÄ¿îµå X %d\n"
+			printf(" ==> 50íŒŒìš´ë“œ X %dê°œ, 20íŒŒìš´ë“œ x %dê°œ, 10íŒŒìš´ë“œ X %d, 5íŒŒìš´ë“œ X %d\n"
 					, changeForeignCurrency50, changeForeignCurrency20, changeForeignCurrency10, changeForeignCurrency5);
 		}
 	
-		printf("°Å½º¸§µ· : %d ¿ø\n", returnKRWFinal);
-		printf(" ==> 1000 ¿ø X %d°³, 500¿ø X %d°³, 100¿ø X %d°³, 50¿ø X %d°³, 10¿ø X %d°³\n"
+		printf("ê±°ìŠ¤ë¦„ëˆ : %d ì›\n", returnKRWFinal);
+		printf(" ==> 1000 ì› X %dê°œ, 500ì› X %dê°œ, 100ì› X %dê°œ, 50ì› X %dê°œ, 10ì› X %dê°œ\n"
 					, returnKRW1000, returnKRW500, returnKRW100, returnKRW50, returnKRW10);
 		printf("========================================\n");
 	}
