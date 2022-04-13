@@ -64,7 +64,7 @@ int main() {
 	firstDayOfinputMonth = daysFrom1900 + daysFromThisYear + 1; 
 	// *참고) 1900.01.01 = 1 (월), 1900.01.2 = 2 (화), ...
 	// ==> if (firstDayOfinputMonth % 7 == 1) ==> firstDayOfinputMonth가 월요일!
-	// ==> 0 일 1 월 2 화 3 수 4 목 5금 6 토 
+	// ==> 0일 1월 2화 3수 4목 5금 6토 
 	
 	// <inputYear, inputMonth의 첫 번째 요일 계산하기 끝!>
 	// ************************************************************
@@ -82,7 +82,7 @@ int main() {
 	printf("\n======= %d년 %d월 =======\n", inputYear, inputMonth);
 	printf("일\t월\t화\t수\t목\t금\t토\n");
 	// 해당 월 시작 요일에 따라 공란 (\t) 출력.
-	// (firstDayOfinputMonth % 7) => 0 일 1 월 2 화 3 수 4 목 5금 6 토 
+	// (firstDayOfinputMonth % 7) => 0일 1월 2화 3수 4목 5금 6토 
 	for (int indexD = 0; indexD < (firstDayOfinputMonth % 7); indexD++) {
 		if (indexD == 6) {
 			break;
