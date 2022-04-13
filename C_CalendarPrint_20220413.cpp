@@ -92,7 +92,7 @@ int main() {
 	}
 		
 	// 날짜 인쇄 => 토요일 날짜 인쇄 후 개행 & 그 외 요일 날짜 인쇄 후 tab 
-	// (indexE % 7) => 0 일 1 월 2 화 3 수 4 목 5금 6 토 
+	// (indexE % 7) => 0일 1월 2화 3수 4목 5금 6토 
 	for (int indexE = firstDayOfinputMonth; indexE < firstDayOfinputMonth+daysOfinputMonth; indexE++) {
 		if (indexE%7 == 6) { 	// 토요일
 			printf("%d\n", indexE-firstDayOfinputMonth+1);
