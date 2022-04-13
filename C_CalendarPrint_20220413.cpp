@@ -6,8 +6,8 @@
 
 int main() {
 	
-	int inputYear;				// 입력 받은 연도 값. 
-	int inputMonth;				// 입력 받은 월 값. 
+	int inputYear;			// 입력 받은 연도 값. 
+	int inputMonth;			// 입력 받은 월 값. 
 	
 	int leapYearNumber; 		// 1900년~(inputYear-1)까지 윤년 개수 
 	int daysFrom1900; 		// 1900년~(inputYear-1)까지 총 날짜 개수 (1900.01.01 = 1) 
@@ -56,7 +56,7 @@ int main() {
 			daysFromThisYear = daysFromThisYear + inputYearDays[indexC-1];
 		}
 	} else { 			// 1월인 경우 -> 0 
-			daysFromThisYear = 0;
+		daysFromThisYear = 0;
 	}
 	
 	// 4. 1900년부터 inputYear의 inputMonth 첫 번째 날까지 총 날짜 수 (=> firstDayOfinputMonth)
